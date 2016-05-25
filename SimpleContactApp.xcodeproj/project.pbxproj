@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		B7ABE17F1CF5FE4700ECFD72 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B7ABE17E1CF5FE4700ECFD72 /* main.m */; };
 		B7ABE1821CF5FE4700ECFD72 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B7ABE1811CF5FE4700ECFD72 /* AppDelegate.m */; };
-		B7ABE1851CF5FE4700ECFD72 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7ABE1841CF5FE4700ECFD72 /* ViewController.m */; };
 		B7ABE1881CF5FE4700ECFD72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7ABE1861CF5FE4700ECFD72 /* Main.storyboard */; };
 		B7ABE18B1CF5FE4700ECFD72 /* SimpleContactApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B7ABE1891CF5FE4700ECFD72 /* SimpleContactApp.xcdatamodeld */; };
 		B7ABE18D1CF5FE4700ECFD72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7ABE18C1CF5FE4700ECFD72 /* Assets.xcassets */; };
 		B7ABE1901CF5FE4700ECFD72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7ABE18E1CF5FE4700ECFD72 /* LaunchScreen.storyboard */; };
 		B7ABE19B1CF5FE4800ECFD72 /* SimpleContactAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7ABE19A1CF5FE4800ECFD72 /* SimpleContactAppTests.m */; };
 		B7ABE1A61CF5FE4800ECFD72 /* SimpleContactAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B7ABE1A51CF5FE4800ECFD72 /* SimpleContactAppUITests.m */; };
+		B7ABE1B71CF6010C00ECFD72 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7ABE1B61CF6010C00ECFD72 /* CoreData.framework */; };
+		B7ABE1BA1CF607A100ECFD72 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7ABE1B91CF607A100ECFD72 /* AddViewController.m */; };
+		B7ABE1BD1CF607D000ECFD72 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7ABE1BC1CF607D000ECFD72 /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +42,6 @@
 		B7ABE17E1CF5FE4700ECFD72 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B7ABE1801CF5FE4700ECFD72 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B7ABE1811CF5FE4700ECFD72 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B7ABE1831CF5FE4700ECFD72 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B7ABE1841CF5FE4700ECFD72 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B7ABE1871CF5FE4700ECFD72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7ABE18A1CF5FE4700ECFD72 /* SimpleContactApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SimpleContactApp.xcdatamodel; sourceTree = "<group>"; };
 		B7ABE18C1CF5FE4700ECFD72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +53,11 @@
 		B7ABE1A11CF5FE4800ECFD72 /* SimpleContactAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleContactAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7ABE1A51CF5FE4800ECFD72 /* SimpleContactAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleContactAppUITests.m; sourceTree = "<group>"; };
 		B7ABE1A71CF5FE4800ECFD72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7ABE1B61CF6010C00ECFD72 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B7ABE1B81CF607A100ECFD72 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		B7ABE1B91CF607A100ECFD72 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
+		B7ABE1BB1CF607D000ECFD72 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		B7ABE1BC1CF607D000ECFD72 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7ABE1B71CF6010C00ECFD72 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +89,7 @@
 		B7ABE1711CF5FE4600ECFD72 = {
 			isa = PBXGroup;
 			children = (
+				B7ABE1B61CF6010C00ECFD72 /* CoreData.framework */,
 				B7ABE17C1CF5FE4600ECFD72 /* SimpleContactApp */,
 				B7ABE1991CF5FE4800ECFD72 /* SimpleContactAppTests */,
 				B7ABE1A41CF5FE4800ECFD72 /* SimpleContactAppUITests */,
@@ -105,8 +112,10 @@
 			children = (
 				B7ABE1801CF5FE4700ECFD72 /* AppDelegate.h */,
 				B7ABE1811CF5FE4700ECFD72 /* AppDelegate.m */,
-				B7ABE1831CF5FE4700ECFD72 /* ViewController.h */,
-				B7ABE1841CF5FE4700ECFD72 /* ViewController.m */,
+				B7ABE1BB1CF607D000ECFD72 /* TableViewController.h */,
+				B7ABE1BC1CF607D000ECFD72 /* TableViewController.m */,
+				B7ABE1B81CF607A100ECFD72 /* AddViewController.h */,
+				B7ABE1B91CF607A100ECFD72 /* AddViewController.m */,
 				B7ABE1861CF5FE4700ECFD72 /* Main.storyboard */,
 				B7ABE18C1CF5FE4700ECFD72 /* Assets.xcassets */,
 				B7ABE18E1CF5FE4700ECFD72 /* LaunchScreen.storyboard */,
@@ -273,9 +282,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7ABE1BA1CF607A100ECFD72 /* AddViewController.m in Sources */,
 				B7ABE18B1CF5FE4700ECFD72 /* SimpleContactApp.xcdatamodeld in Sources */,
-				B7ABE1851CF5FE4700ECFD72 /* ViewController.m in Sources */,
 				B7ABE1821CF5FE4700ECFD72 /* AppDelegate.m in Sources */,
+				B7ABE1BD1CF607D000ECFD72 /* TableViewController.m in Sources */,
 				B7ABE17F1CF5FE4700ECFD72 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

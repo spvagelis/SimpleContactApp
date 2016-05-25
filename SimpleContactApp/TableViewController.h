@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TableViewController.h
 //  SimpleContactApp
 //
 //  Created by vagelis spirou on 25/5/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface TableViewController : UITableViewController
 
 @end
-
