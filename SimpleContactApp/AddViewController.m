@@ -33,6 +33,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    if (self.device) {
+        [self.NameField setText:[self.device valueForKey:@"name"]];
+        [self.PhoneField setText:[self.device valueForKey:@"phonenumber"]];
+
+    }
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,6 +59,31 @@
 */
 
 - (IBAction)SaveContact:(id)sender {
+    
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    if (self.device) {
+        [self.device setValue:self.NameField.text forKey:@"name"];
+        [self.device setValue:self.PhoneField.text forKey:@"phonenumber"];
+    } else {
+        
+        NSManagedObject *newDevice = [NSEntityDescription insertNewObjectForEntityForName:@"ContactData" inManagedObjectContext:context];
+        
+        [newDevice setValue:self.NameField.text forKey:@"name"];
+        [newDevice setValue:self.PhoneField.text forKey:@"phonenumber"];
+        
+        NSError *error = nil;
+        
+        if (![context save:&error]) {
+            NSLog(@"%@ %@", error, [error localizedDescription]);
+        }
+
+    }
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
+    
+    
 }
 
 - (IBAction)PhoneCall:(id)sender {
@@ -60,5 +93,7 @@
 }
 
 - (IBAction)DismissKeyboard:(id)sender {
+    
+    [self resignFirstResponder];
 }
 @end

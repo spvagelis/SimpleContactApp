@@ -37,6 +37,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="oL2-ke-GPS" kind="show" identifier="UpdateContact" id="g2r-jK-VJc"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -149,4 +152,7 @@
             <point key="canvasLocation" x="407" y="430.99999999999994"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="g2r-jK-VJc"/>
+    </inferredMetricsTieBreakers>
 </document>
