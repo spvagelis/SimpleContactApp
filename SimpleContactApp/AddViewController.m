@@ -87,10 +87,52 @@
 }
 
 - (IBAction)PhoneCall:(id)sender {
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel:%@",self.PhoneField.text]]];
+    
 }
 
 - (IBAction)SMSMessage:(id)sender {
+    
+    MFMessageComposeViewController *textcom = [[MFMessageComposeViewController alloc] init];
+    [textcom setMessageComposeDelegate:self];
+    
+    if ([MFMessageComposeViewController canSendText]) {
+        [textcom setRecipients:[NSArray arrayWithObjects:self.PhoneField.text, nil]];
+        [textcom setBody:[NSString stringWithFormat:@"%@", self.NameField.text]];
+        
+        [self presentViewController:textcom animated:YES completion:NULL];
+    }else {
+        
+        NSLog(@"Cannot send message");
+        
+    }
+    
+    
 }
+
+
+-(void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result {
+    
+    switch (result) {
+        case MessageComposeResultCancelled:
+            NSLog(@"Cancelled");
+            break;
+        case MessageComposeResultFailed:
+            NSLog(@"Failed");
+            break;
+        case MessageComposeResultSent:
+            NSLog(@"Sent");
+            break;
+            
+        default:
+            break;
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:NULL];
+    
+}
+
 
 - (IBAction)DismissKeyboard:(id)sender {
     

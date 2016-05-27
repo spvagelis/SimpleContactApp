@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
-@interface AddViewController : UIViewController
+@interface AddViewController : UIViewController <MFMessageComposeViewControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *NameField;
 @property (strong, nonatomic) IBOutlet UITextField *PhoneField;
